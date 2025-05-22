@@ -2,7 +2,7 @@
 
 ## Descrizione del Progetto
 
-Questo progetto mira a confrontare due algoritmi per la selezione del Seed Set iniziale in una rete sociale, allo scopo di massimizzare l'influenza diffusa tramite un algoritmo di influence diffusion. Inoltre, abbiamo proposto un terzo algoritmo con l'intento di migliorare i risultati ottenuti dai metodi precedenti.
+Questo progetto mira a confrontare due algoritmi per la selezione del **Seed Set** iniziale in una rete sociale, allo scopo di massimizzare il numero di nodi influenzati tramite un algoritmo di **Influence Diffusion**. Inoltre, abbiamo proposto un terzo algoritmo con l'intento di migliorare i risultati ottenuti dai metodi precedenti.
 
 L'analisi viene condotta rispettando un vincolo di budget `K`, ovvero la somma dei costi associati ai nodi selezionati come seed set non può eccedere tale valore.
 
