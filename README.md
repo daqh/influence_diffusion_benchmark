@@ -21,7 +21,7 @@ L'analisi viene condotta rispettando un vincolo di budget `K`, ovvero la somma d
 1. Clonare la repository
 
 ```bash
-git clone https://github.com/yourusername/yourrepository.git
+git clone [https://github.com/yourusername/yourrepository.git](https://github.com/daqh/influence_diffusion_benchmark.git)
 ```
 
 2. Installare le dipendenze necessarie
