@@ -1,0 +1,4 @@
+networkx==3.5
+tqdm==4.67.1
+matplotlib==3.10.3
+matplotlib-inline==0.1.7
