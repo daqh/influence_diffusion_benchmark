@@ -18,33 +18,10 @@ def random_seeds(G: nx.Graph, c: callable) -> set[int]:
         return S_d, k
     return wrapper
 
-# Cost-based Greedy Algorithm
-
-from multiprocessing import Pool
 from copy import deepcopy
 
-def worker(G, S_d, v, f, c, neighbors):
-    return (f(S_d.union({v}), neighbors) - f(S_d, neighbors)) / c(v, G)
-
-def cost_seeds_greedy(G: nx.Graph, c: callable, f: callable) -> tuple[set[int], float]:
-    def wrapper(k: int):
-        S_p = set()
-        S_d = set()
-        nodes = set(G.nodes())
-        neighbors = {n: set(G.neighbors(n)) for n in nodes}
-
-        while True:
-            nodes = list(nodes.difference(S_d))
-            with Pool(24) as pool:
-                candidates = pool.starmap(worker, [(G, S_d, v, f, c, neighbors) for v in nodes])
-            u = nodes[candidates.index(max(candidates))]
-            S_p = deepcopy(S_d)
-            S_d = S_p.union({u})
-            if sum([c(n, G) for n in S_d]) > k:
-                break
-            nodes = set(nodes)
-        return S_p, sum([c(n, G) for n in S_p])
-    return wrapper
+# def worker(G, S_d, v, f, c, neighbors):
+#     return (f(S_d.union({v}), neighbors) - f(S_d, neighbors)) / c(v, G)
 
 # WTSS
 
