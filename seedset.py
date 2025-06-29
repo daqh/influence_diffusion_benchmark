@@ -59,3 +59,28 @@ def wtss(G: nx.Graph, c: callable, t: np.ndarray):
             _G.remove_node(v)
         return S, sum([c(n, G) for n in S])
     return wrapper
+
+def purp(G: nx.Graph, c: callable):
+    V = set(G.nodes())
+    def wrapper(k: int):
+        i = 0
+        S = set()
+        ss_cost = 0
+        while True:
+            _G = nx.subgraph(G, V.difference(S)) # Induced subgraph
+            i += 1
+            print(f"Iteration {i}, remaining nodes: {_G.number_of_nodes()}", end='\r')
+            betweenness = nx.betweenness_centrality(_G) # Calculate betweenness centrality
+            betweenness = np.array([betweenness[v] if v in betweenness else 0 for v in range(max(G.nodes()) + 1)])
+            # Get the node with maximum betweenness centrality
+            u = np.argmax(betweenness)
+            # Check the cost
+            u_cost = c(u, G)
+            if ss_cost + u_cost > k:
+                break
+            S.add(u)
+            ss_cost += u_cost
+            # Remove the node from the graph
+            _G.remove_node(u)
+        return S, ss_cost
+    return wrapper
