@@ -11,3 +11,7 @@ def degree_cost(degrees: dict) -> float:
         return ceil(degrees[n] / 2)
     return wrapper
 
+def betweeness_cost(betweenness: dict) -> float:
+    def wrapper(n: int, G: nx.Graph):
+        return betweenness[n] if n in betweenness else 0
+    return wrapper
