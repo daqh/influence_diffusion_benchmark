@@ -10,3 +10,4 @@ def degree_cost(degrees: dict) -> float:
     def wrapper(n: int, G: nx.Graph):
         return ceil(degrees[n] / 2)
     return wrapper
+
