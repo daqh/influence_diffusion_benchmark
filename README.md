@@ -46,7 +46,15 @@ NUM_STEPS = 30
 ```
 
 ## Struttura della Repository
-
+- **src**: contiene il codice dell'algoritmo Cost-Seeds-Greedy scritto in linguaggio C
+- **seedset.py**: contiene il codice dei 4 algoritmi usati per il confronto
+- **requirements.txt**: contiene i requisiti necessari per avviare il progetto
+- **influence.py**: contiene il codice dell'algoritmo di Influence Diffusion
+- **cost-seeds-greedy.ipynb**: contiene la pipeline relativa all'esecuzione dell'algoritmo Cost-Seeds-Greedy
+- **cost.py**: contiene le tre funzioni di costo utilizzate per il confronto
+- **compare.ipynb**: contiene il codice per la generazione di grafici mettendo in evidenza le differenze tra gli algoritmi
+- **test.ipynb**: è il file principale per eseguire gli algoritmi sulle funzioni di costo.
+- **influence.ipynb**: 
 
 ## Contributi
 
