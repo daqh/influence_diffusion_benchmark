@@ -45,7 +45,6 @@ COST_FN = "uniform"
 NUM_STEPS = 30
 ```
 
-
 ## Struttura della Repository
 
 
