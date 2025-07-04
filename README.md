@@ -26,11 +26,9 @@ git clone https://github.com/daqh/influence_diffusion_benchmark.git
 
 2. Installare le dipendenze necessarie, come:
  ```bash
-         pip install networkx
-         ```
-      ```bash
-         pip install tqdm
-         ```
+pip install networkx
+pip install tqdm
+```
 
 3. Scarica il file **lastfm_asia_edges.csv** dalla Fonte e inseriscilo nel path corretto ("data/")
 
