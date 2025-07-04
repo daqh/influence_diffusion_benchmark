@@ -8,8 +8,8 @@ L'analisi viene condotta rispettando un vincolo di budget `K`, ovvero la somma d
 
 * **Rete utilizzata:**
 
-  * Graph Embedding with Self Clustering: Facebook (34.833 nodi e 1.380.293 edges)
-  * Fonte: [Gemsec Facebook dataset](https://snap.stanford.edu/data/gemsec-Facebook.html)
+  * Social Network di utenti **LastFTM** (7.624 nodi e 27.806 edges)
+  * Fonte: [LastFM Asia Social Network](https://snap.stanford.edu/data/feather-lastfm-social.html)
 
 ## Obiettivi
 
@@ -24,11 +24,29 @@ L'analisi viene condotta rispettando un vincolo di budget `K`, ovvero la somma d
 git clone https://github.com/daqh/influence_diffusion_benchmark.git
 ```
 
-2. Installare le dipendenze necessarie
+2. Installare le dipendenze necessarie, come:
+ ```bash
+         pip install networkx
+         ```
+      ```bash
+         pip install tqdm
+         ```
 
-3. Eseguire gli script per la selezione del seed set
+3. Scarica il file **lastfm_asia_edges.csv** dalla Fonte e inseriscilo nel path corretto ("data/")
 
-4. Avviare la simulazione di diffusione
+4. Come prima riga del file.csv inserisci
+```bash
+         node_1,node_2
+         ```
+
+5. Avviare le simulazioni desiderate modificando le variabili globali per selezionare algoritmo e funzione di costo
+```bash
+         DATASET_NAME = "lastfm_asia"
+         SS_STRATEGY = "purp"
+         COST_FN = "uniform"
+         NUM_STEPS = 30
+         ```
+
 
 ## Struttura della Repository
 
