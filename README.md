@@ -53,7 +53,6 @@ NUM_STEPS = 30
 - **influence.py**: contiene il codice dell'algoritmo di Influence Diffusion
 - **cost-seeds-greedy.ipynb**: contiene la pipeline relativa all'esecuzione dell'algoritmo Cost-Seeds-Greedy
 - **cost.py**: contiene le tre funzioni di costo utilizzate per il confronto
-- **compare.ipynb**: contiene il codice per la generazione di grafici mettendo in evidenza le differenze tra gli algoritmi
 - **test.ipynb**: è il file principale per eseguire gli algoritmi sulle funzioni di costo.
 - **influence.ipynb**: effettua il confronto tra gli algoritmi su varie metriche generando grafici ad hoc
 
