@@ -2,9 +2,9 @@
 
 ## Descrizione del Progetto
 
-Questo progetto mira a confrontare due algoritmi per la selezione del **Seed Set** iniziale in una rete sociale, allo scopo di massimizzare il numero di nodi influenzati tramite un algoritmo di **Influence Diffusion**. Inoltre, abbiamo proposto un terzo algoritmo con l'intento di migliorare i risultati ottenuti dai metodi precedenti.
+Questo progetto si propone di confrontare due algoritmi per la selezione del Seed Set iniziale all'interno di una rete sociale, con l'obiettivo di massimizzare la diffusione dell'influenza attraverso un modello di **Influence Diffusion**. Oltre a questi, è stato sviluppato un terzo algoritmo volto a migliorare le prestazioni dei metodi precedenti, e un quarto algoritmo, basato su una selezione casuale, utilizzato come baseline per evidenziare i limiti inferiori delle performance ottenibili.
 
-L'analisi viene condotta rispettando un vincolo di budget `K`, ovvero la somma dei costi associati ai nodi selezionati come seed set non può eccedere tale valore.
+L'analisi viene condotta rispettando un vincolo di budget `K`, ovvero la somma dei costi associati ai nodi selezionati come Seed Set non può eccedere tale valore.
 
 * **Rete utilizzata:**
 
@@ -28,6 +28,7 @@ git clone https://github.com/daqh/influence_diffusion_benchmark.git
  ```bash
 pip install networkx
 pip install tqdm
+pip install seaborn
 ```
 
 3. Scarica il file **lastfm_asia_edges.csv** dalla Fonte e inseriscilo nel path corretto ("data/processed/")
@@ -54,8 +55,8 @@ NUM_STEPS = 30
 - **cost.py**: contiene le tre funzioni di costo utilizzate per il confronto
 - **compare.ipynb**: contiene il codice per la generazione di grafici mettendo in evidenza le differenze tra gli algoritmi
 - **test.ipynb**: è il file principale per eseguire gli algoritmi sulle funzioni di costo.
-- **influence.ipynb**: 
+- **influence.ipynb**: effettua il confronto tra gli algoritmi su varie metriche generando grafici ad hoc
 
 ## Contributi
 
-Eventuali contributi o suggerimenti sono ben accetti. Aprire una issue o inviare una pull request per proporre modifiche e miglioramenti.
+Eventuali contributi o suggerimenti sono ben accetti. Aprire una issue o inviare una pull request per proporre modifiche e miglioramenti. É possibile anche implementare un nuovo algoritmo e modificare opportunamente il codice al fine di confrontarlo con i 4 algoritmi implementati.
