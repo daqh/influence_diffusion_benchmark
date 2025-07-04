@@ -30,20 +30,20 @@ pip install networkx
 pip install tqdm
 ```
 
-3. Scarica il file **lastfm_asia_edges.csv** dalla Fonte e inseriscilo nel path corretto ("data/")
+3. Scarica il file **lastfm_asia_edges.csv** dalla Fonte e inseriscilo nel path corretto ("data/processed/")
 
 4. Come prima riga del file.csv inserisci
 ```bash
-         node_1,node_2
-         ```
+node_1,node_2
+```
 
-5. Avviare le simulazioni desiderate modificando le variabili globali per selezionare algoritmo e funzione di costo
+5. Avviare le simulazioni desiderate modificando le variabili globali per selezionare algoritmo e funzione di costo. Esempio:
 ```bash
-         DATASET_NAME = "lastfm_asia"
-         SS_STRATEGY = "purp"
-         COST_FN = "uniform"
-         NUM_STEPS = 30
-         ```
+DATASET_NAME = "lastfm_asia"
+SS_STRATEGY = "wtss"
+COST_FN = "uniform"
+NUM_STEPS = 30
+```
 
 
 ## Struttura della Repository
